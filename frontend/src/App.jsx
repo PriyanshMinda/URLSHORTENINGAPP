@@ -8,7 +8,7 @@ export default function App() {
   const [analytics, setAnalytics] = useState([]);
 
   const handleSubmit = () => {
-    axios.post("http://localhost:3000/api/short", { originalUrl })
+    axios.post("https://urlshorteningapp.onrender.com/api/short", { originalUrl })
       .then((res) => {
         setShortUrl(res.data);
       })
@@ -18,7 +18,7 @@ export default function App() {
   };
 
   const fetchAnalytics = () => {
-    axios.get("http://localhost:3000/api/analytics")
+    axios.get("https://urlshorteningapp.onrender.com/api/analytics")
       .then((res) => {
         setAnalytics(res.data);
       })
