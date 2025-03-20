@@ -86,7 +86,7 @@ Code Snippet for above 3 Steps :
        
          <p>Shortened URL:</p>
 
- <a href={ https://url-shortning-web-app.onrender.com/{shortUrl?.shortUrl}} 
+ <a href={ https://urlshorteningapp.onrender.com/{shortUrl?.shortUrl}} 
    target="_blank" 
    rel="noopener noreferrer"
    onClick={() => trackClick(shortUrl?.shortUrl)}>
@@ -101,7 +101,7 @@ Step 2 : Redirecting to Original URL :
 -When the user clicks on the Short URL , the frontend calls the backend /shortUrl endpoint.
 
      {  // Code Snippet for this 
-    <a href={ https://url-shortning-web-app.onrender.com/{shortUrl?.shortUrl}} 
+    <a href={ https://urlshorteningapp.onrender.com/{shortUrl?.shortUrl}} 
       target="_blank" 
       rel="noopener noreferrer"
       onClick={() => trackClick(shortUrl?.shortUrl)}>
@@ -147,7 +147,7 @@ Step 3 ) When the user clicks the 'Show CLick Analytics' Button , a get Request 
 Following is the fetchAnalytics Function :
 
  const fetchAnalytics = () => {
- axios.get('https://url-shortning-web-app.onrender.com/api/analytics')
+ axios.get('https://urlshorteningapp.onrender.com.com/api/analytics')
  .then((res) => {
  setAnalytics(res.data);
  console.log("Analytics Data", res.data);
@@ -173,43 +173,33 @@ Code Snippet for /api/analytics route of Backend
 });
 Front End Code for displaying the Data in form of a Table :
 
-   {analytics.length > 0 && (
-      <div className="analytics-container">
-       <table className="analytics-table">
-<thead>
-    <tr>
-        <th>Short URL</th>
-        <th>Original URL</th>
-        <th>Clicks</th>
-        <th>Locations</th>
-    </tr>
-</thead>
-<tbody>
-    {analytics.map((url, index) => (
-        <tr key={index}>
-            <td>
-            <a href={https://url-shortning-web-app.onrender.com/${url.shortUrl}}
-   target="_blank" 
-    rel="noopener noreferrer" 
-     onClick={() => trackClick(url.shortUrl)}>
-  {url.shortUrl}
-    </a>
-            </td>
-            <td>{url.originalUrl}</td>
-            <td>{url.clicks}</td>
-            <td>
-                {url.locations && url.locations.length > 0 ? (
-                    url.locations.map((loc, i) => (
-                        <div key={i}>{loc.city}, {loc.country}</div>
-                    ))
-                ) : (
-                    "No Data"
-                )}
-            </td>
-        </tr>
-    ))}
-</tbody>
-</table>
+{analytics.length > 0 && (
+          <div className="analytics-container">
+            <table className="analytics-table">
+              <thead>
+                <tr>
+                  <th>Short URL</th>
+                  <th>Original URL</th>
+                  <th>Clicks</th>
+                </tr>
+              </thead>
+              <tbody>
+                {analytics.map((url, index) => (
+                  <tr key={index}>
+                    <td>
+                      <a href={`https://urlshorteningapp.onrender.com/${url.shortUrl}`} target="_blank" rel="noopener noreferrer">
+                        {url.shortUrl}
+                      </a>
+                    </td>
+                    <td>{url.originalUrl}</td>
+                    <td>{url.clicks}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+
 3 ) APIs Used in the Project :
 
 a) Creating a ShortURL :
