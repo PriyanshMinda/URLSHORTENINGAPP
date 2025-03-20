@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  margin-top: 5rem;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  color: #b71c1c;
+}
+
+.input-box {
+  background-color: white;
+  color: black;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #f06292;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+}
+
+.crazy-button,
+.analytics-button {
+  padding: 12px 20px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.short-url-box {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.qr-code {
+  display: block;
+  margin: 10px auto;
+  width: 150px;
+  height: auto;
+}
+
+.analytics-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 2px solid #e91e63;
+  padding: 12px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+th {
+  background: #e91e63;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+tr:hover {
+  background: rgba(255, 182, 193, 0.7);
+}
+
+.short-url-text{
+    color: black;
+    font-weight: bold;
+}
