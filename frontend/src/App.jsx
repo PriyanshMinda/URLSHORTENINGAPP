@@ -72,7 +72,7 @@ export default function App() {
                 {analytics.map((url, index) => (
                   <tr key={index}>
                     <td>
-                      <a href={url.shortUrl} target="_blank" rel="noopener noreferrer">
+                      <a href={`https://urlshorteningapp.onrender.com/${url.shortUrl}`} target="_blank" rel="noopener noreferrer">
                         {url.shortUrl}
                       </a>
                     </td>
