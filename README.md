@@ -1,4 +1,4 @@
-This project effectively shortens URLs, tracks clicks, and provides analytics with location data and also generates and displays a QR Code for each shortened URL using the qrcode package, allowing users to scan and visit the link easily.
+This project effectively shortens URLs, tracks clicks, and provides analytics and also generates and displays a QR Code for each shortened URL using the qrcode package, allowing users to scan and visit the link easily.
 
 It is built with MongoDB, Node.js, React.js, and uses nanoid  for extra features.
 
