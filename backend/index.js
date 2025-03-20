@@ -47,7 +47,8 @@ app.get('/:shortUrl',async(req,res)=>{
         if(url){
             url.clicks++;
             await url.save();
-            return res.redirect(url.originalUrl);
+            return res.redirect(301, url.originalUrl.startsWith("http") ? url.originalUrl : `https://${url.originalUrl}`);
+
         }else{
             return res.status(404).json({error : 'URL not found'});
         }
